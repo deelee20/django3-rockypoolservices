@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+{% extends "poolServices/base.html" %}
+{% load static %}
+<body>
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container-fluid text-center" style="background-color: #f1f1f1;">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+     
+    </div>
+    <div class="col-sm-4 text-right"> 
+
+    	<img src="{% static 'poolServices/thanks.jpg' %}" class="img-fluid">
+
+    </div>
+    <div class="col-sm-4 text-right"> 
+			  <h1>Contact Us</h1>
+
+
+			<form method="POST">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Submit</button>
+			</form>
+
+        <br>
+  
+    </div>
+    <div class="col-sm-2 sidenav">
+
+  
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
+</body>
+
+</html>

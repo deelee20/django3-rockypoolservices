@@ -1,0 +1,124 @@
+<html>
+
+{% extends "poolServices/base.html" %}
+{% load static %}
+{% block content %}
+<body>
+
+<br>
+<br>
+
+
+<div class="container-fluid text-center" style="background-color: #333232">    
+  <div class="row content">
+    <div class="col-md-2 sidenav">
+      <div class='row content'>
+        <br>
+        <br>
+      </div>
+    </div>
+    <div class="col-md-8 text-center" style="background-color: #fff;">
+           <div class="row content">
+            <div class="col-12" style="background-color: #f1f1f1;" >
+              <br>
+          
+            </div>
+           </div>
+     <br>
+     <br>
+
+      <h1>ROCKY'S</h1><h1 style="text-decoration: underline overline wavy blue;">Pool Care</h1>
+      <br>
+      <br>
+      <img src="{% static 'poolServices/rockyCover.jpg' %}" class="img-fluid">
+
+      <br>
+      <br>
+
+      <p><b>Rocky's Pool Care </b>clears up the problems with <b>pools.</b> As a family owned and opperated service for over <b> 20 years </b>, we know our way around a <b>pool...</b> Push your<b> pool </b>problems to us, with a monthly restoration to keep your<b> pool </b>looking perfect!</p> 
+      <br>
+      <h2>Areas</h2>
+      <p>Cypress, West Houston Areas & La Grange</p>
+      <hr>
+       <div class="row content text-center">
+        <div class="col-12" style="background-color: #333232" >
+          <br>
+          <h1 style="color: white; font-size: 28;">Reviews</h1>
+          {% for review in reviews %}
+
+          <div class="col-sm-12 text-center">
+
+            <p style="color: white; font-size: 20">"{{ review.comments }}"</p>
+           
+            <p style="color: white; font-size: 14">-{{ review.name }}, {{ review.location }}</p>
+
+          </div>
+
+
+          {% endfor %}
+          
+          
+          <div class="col-sm-12 text-center">
+
+          <a class="btn btn-sm" style="color: #fff;" href="{% url 'reviews' %}" role="button"><h1 style="font-size: 24; color: white;">VIEW ALL</h1></a>
+
+              </div>
+             <br> 
+             <br>
+        </div>
+        
+       </div>
+
+       <br>
+
+      <h2 style="text-decoration: underline overline wavy blue;">Monthly Appointment Include:</h2>
+
+      <br>
+
+      <div class='row content'>
+
+{% for service in services %}
+
+ <div class="col-sm-4 text-center" style="background-color: #fff;">
+      <p style="font-size: 22;">{{ service.title }}</p>
+    </div>
+
+{% endfor %}
+</div>
+
+
+<a class="btn btn-primary btn-sm" style="color: #fff;" href="{% url 'services' %}" role="button">Learn More</a>
+
+
+
+<br>
+<br>
+    </div>
+
+
+    <div class="col-md-2 sidenav">
+      <div class='row content'></div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+<footer class="container-fluid text-center ">
+<p style="font-size: 12; color: white;">Website Made By DeeLeeTech</p>
+</footer>
+
+{% endblock %}
+
+
+</body>
+
+
+
+
+
+
+</html>

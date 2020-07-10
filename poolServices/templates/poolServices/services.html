@@ -1,0 +1,114 @@
+<html>
+
+{% extends "poolServices/base.html" %}
+{% load static %}
+{% block content %}
+<body>
+
+<br>
+<br>
+
+
+<div class="container-fluid text-center" style="background-color: #f1f1f1;">    
+  <div class="row content">
+    <div class="col-md-2 sidenav">
+      <div class='row content'>
+        
+      </div>
+    </div>
+    <div class="col-md-8 text-center" style="background-color: #fff;">
+     <br>
+     <br>
+     <h1 style="font-size: 52;">Monthly Pool Care</h1>
+     <br>
+     <p style="color: black;">We maintain a monthly servicing of your pool, making sure it is the prettiest part of your backyard! Stop lifting fingers and start dipping toes... we'll take care of rest!! Read about how we do it bellow</p>
+
+           <div class="row content">
+	        	<div class="col-12" style="background-color: #333232">
+	       		<br>
+	       		<br>
+	       		</div>
+	       	</div>
+  <br>
+
+
+
+
+
+		{% for service in services %}
+
+
+
+		<div class="row content">
+	        	<div class="col-6" style="background-color: #f1f1f1;" >
+	       		<br>
+					<h2>{{ service.title }}</h2>
+
+			      <p>
+			      	{{ service.description }}
+			      </p>
+
+   				</div>
+
+   				<div class="col-6" style="background-color:  #f1f1f1;" >
+				
+				<img src="{{ service.image.url }}" class="img-fluid" alt="">
+
+   				</div>
+	    </div>
+
+
+			 
+			    
+			<br>
+			
+		{% endfor %}
+
+
+           <div class="row content">
+	        	<div class="col-12" style="background-color: #333232" >
+	       		<br>
+	       		<br>
+	       		</div>
+	       	</div>
+
+       <div class="row content">
+        <div class="col-12" style="background-color: #f1f1f1;" >
+       <br>
+       		<h1 style="font-size: 36;"> Request Info Here! </h1>
+       		<a class="btn btn-primary btn-sm" style="color: #fff;" href="{% url 'clients:clients' %}" role="button">Contact</a>
+       	<br>
+       	<br>
+        </div>
+       </div>
+
+    
+
+
+    </div>
+
+
+    <div class="col-md-2 sidenav">
+      <div class='row content'></div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+<footer class="container-fluid text-center ">
+<p style="font-size: 12; color: white;">Website Made By DeeLeeTech</p>
+</footer>
+
+{% endblock %}
+
+
+
+
+
+
+</body>
+</html>

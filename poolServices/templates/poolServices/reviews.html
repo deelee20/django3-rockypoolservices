@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+{% extends "poolServices/base.html" %}
+{% load static %}
+
+
+<body>
+{% block content %}
+
+<div class="container-fluid text-center" style="background-color: #f1f1f1;">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+     
+    </div>
+  
+    <div class="col-sm-8 text-center" style="background-color: #fff"> 
+		<br>
+		<br>
+	   	<br>
+        <br>
+          <h1 style="color: #0104d8; font-size: 48;">Reviews</h1>
+
+          <br>
+          <br>
+          <div class="row content">
+          	<br>
+	          {% for review in reviews %}
+				
+	          <div class="col-sm-12 text-center" style="background-color: #f1f1f1;">
+
+	          	<br>
+
+
+	            <h3>"{{ review.comments }}"</h3>
+	           
+	            <h3>-{{ review.name }}, {{ review.location }}</h3>
+				<br>
+	          </div>
+	          <br>
+	          <br>
+	          {% endfor %}
+     	 </div>
+
+
+  
+    </div>
+    <div class="col-sm-2 sidenav">
+
+  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+</body>
+</html>
