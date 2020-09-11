@@ -27,23 +27,49 @@
      <br>
      <br>
 
-      <h1>ROCKY'S</h1><h1 style="text-decoration: underline overline wavy blue;">Pool Care</h1>
+           <div class="row content">
+            <div class="col-12" style="background-color: #fff;" >
+              <br>
+                    <h1 style="size: 30;">ROCKY's</h1>
+            </div>
+           </div>
+      <h1>Pool Care</h1>
       <br>
       <br>
-      <img src="{% static 'poolServices/rockyCover.jpg' %}" class="img-fluid">
+      <img src="{% static 'poolServices/poolhomepage.jpg' %}" class="img-fluid">
 
       <br>
       <br>
 
-      <p><b>Rocky's Pool Care </b>clears up the problems with <b>pools.</b> As a family owned and opperated service for over <b> 20 years </b>, we know our way around a <b>pool...</b> Push your<b> pool </b>problems to us, with a monthly restoration to keep your<b> pool </b>looking perfect!</p> 
+      <p><b>Rocky's Pool Care </b>clears up the problems with <b>pools.</b> As a family owned and operated service for over <b> 20 years </b>, we know our way around a <b>pool...</b> Push your problems to us, we'll handle your<b> pool </b>care with<b> weekly </b> visits for a flat monthly price! Rocky's Pool Care makes for a <b>perfect</b> pool!</p> 
       <br>
-      <h2>Areas</h2>
-      <p>Cypress, West Houston Areas & La Grange</p>
+      <h2>Free Phone Consultations</h2>
+      <p>* Cypress * Jersey Village * Spring * Tomball * Waller *</p>
+      <a class="btn btn-primary btn-sm" style="color: #0104d8;" href="{% url 'clients:clients' %}" role="button"><h1 style="font-size: 18; color: white;">Get Quote</h1></a>
+
       <hr>
+
+       <br> 
+      <div class="row content">
+
+        <div class="col-sm-6 text-center"> 
+                        <h2>Rocky Powell</h2>
+              <h2>(281) 620-1524</h2>
+            </div>
+        <div class="col-sm-6 text-center"> 
+                        <h2>Gus Powell</h2>
+              <h2>(832) 499-2139</h2>
+            </div>
+
+       
+
+  
+    </div>
+ <br>
        <div class="row content text-center">
         <div class="col-12" style="background-color: #333232" >
           <br>
-          <h1 style="color: white; font-size: 28;">Reviews</h1>
+          <h1 style="color: white; font-size: 32;">Reviews</h1>
           {% for review in reviews %}
 
           <div class="col-sm-12 text-center">
@@ -60,7 +86,7 @@
           
           <div class="col-sm-12 text-center">
 
-          <a class="btn btn-sm" style="color: #fff;" href="{% url 'reviews' %}" role="button"><h1 style="font-size: 24; color: white;">VIEW ALL</h1></a>
+          <a class="btn btn-sm" style="color: #fff;" href="{% url 'reviews' %}" role="button"><h1 style="font-size: 14; color: white;">VIEW ALL</h1></a>
 
               </div>
              <br> 
@@ -71,7 +97,7 @@
 
        <br>
 
-      <h2 style="text-decoration: underline overline wavy blue;">Monthly Appointment Include:</h2>
+      <h2 style="text-decoration: underline wavy blue;">Care Includes:</h2>
 
       <br>
 
